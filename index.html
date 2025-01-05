@@ -122,6 +122,10 @@ content: '>';
             padding: 100px 20px;
         }
 
+	.hero > img {
+		width: 100%;
+}
+
         .hero .team-photos {
             display: flex;
             justify-content: center;
@@ -142,21 +146,10 @@ content: '>';
             // border-radius: 8px;
         }
 
-        .services ul {
-            list-style: none;
-            padding: 0;
-        }
-
         .services li {
             margin: 10px 0;
             padding: 10px;
-            background-color: #1b232a;
             border-radius: 4px;
-        }
-
-        .services li:hover {
-            background-color: #d8b573;
-            color: #202932;
         }
 
         .testimonials blockquote {
@@ -259,6 +252,7 @@ content: '>';
 }
 
 		.project > img {
+			border-radius: 8px;
 			height: 300px;
 			width: 300px;
 		}
@@ -327,12 +321,11 @@ content: '>';
 		<div class="split">
 <div>
             <h1>Softwarelösungen für kleine und mittelständische Unternehmen</h1>
-            <p>Wir bei RoyalZSoftware liefern maßgeschneiderte Lösungen, um Ihr Unternehmen voranzubringen.</p>
+            <p>Man kann nicht über alles Bescheid wissen. Wir von RoyalZSoftware unterstützen Sie gerne bei der Digitalisierung.</p>
+	    <a class="cta-button" href="#about">Mehr erfahren </a>
 </div>
 <div>
-            <p>Wir bei RoyalZSoftware liefern maßgeschneiderte Lösungen, um Ihr Unternehmen voranzubringen.</p>
-            <p>Wir bei RoyalZSoftware liefern maßgeschneiderte Lösungen, um Ihr Unternehmen voranzubringen.</p>
-
+<img src="hero.png" width="100%"/>
 </div>
 </div>
         </section>
@@ -346,13 +339,13 @@ content: '>';
         <!-- Das machen wir Section -->
         <section class="services" id="services">
             <h2>Das machen wir</h2>
-            <ul>
+            <ol>
                 <li>Automatisierung - Effizienzsteigerung durch Prozessautomatisierung.</li>
                 <li>Individuelle Softwareentwicklung - maßgeschneiderte Lösungen für Ihre spezifischen Anforderungen.</li>
                 <li>Mobile App-Entwicklung - innovative Apps für Android und iOS.</li>
                 <li>IT-Beratung und Support - umfassende Beratung für Ihre IT-Projekte.</li>
                 <li>Cloud-Lösungen - Skalierbare und sichere Cloud-Services.</li>
-            </ul>
+            </ol>
         </section>
 
         <!-- Das sagen unsere Kunden Section -->
@@ -379,14 +372,15 @@ Mein Kunde war sehr zufrieden mit der fertigen Smartphone-App!"</p>
             <h2>Portfolio</h2>
 			<ul class="projects">
 				<div class="project">
-					<img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" alt="Preview"/>
+					<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1697573466036/cb00f8e1-e86f-48ad-98c2-1a6f4dbc150b.png?auto=compress,format&format=webp" alt="Preview"/>
 					<h3>
-						Isar Bericht App
+						Versicherungsberichte App
 					</h3>
+					<i>iOS App, React Native</i>
 					<p>
-					Eine mobile Anwendung, die dem Kunden das tägliche Geschäft vereinfacht hat. Es wurde eine Kundenverwaltung eingebaut.
+					Eine App, mit dem der Kunde, Mitarbeiter eines Heizungstechnik Unternehmen, mühelos Berichte für Versicherungen schreiben kann.
 					</p>
-					<a href="#" class="cta-button">
+					<a target="_blank" href="https://royalzsoftware.de/case-study-saving-10-hrsweek-with-a-mobile-app" class="cta-button">
 						Mehr erfahren
 					</a>
 				</div>
