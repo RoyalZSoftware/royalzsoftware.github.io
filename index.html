@@ -89,6 +89,18 @@
             text-decoration: none;
             font-size: 1.0rem;
         }
+.cta-button:after {
+content: '>';
+}
+.cta-button {
+            color: white;
+	    width: fit-content;
+            text-decoration: none;
+		padding: 12px 16px;
+	display: block;
+            font-size: 1.0rem;
+	  background: -webkit-linear-gradient(70deg, #d8b573, #e55100);
+}
 	.navbar a:hover:not(.kontakt) {
 	    transition: 0.1s all;
 	  background: -webkit-linear-gradient(70deg, #d8b573, #e55100);
@@ -165,6 +177,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
+	    object-fit: cover;
         }
 	.split {
 		display: flex;
@@ -225,6 +238,30 @@
         section {
             opacity: 0;
         }
+		.projects {
+			padding: 0;
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			gap: 16px;
+			overflow-x: auto;
+		}
+        .project {
+		width: 300px;
+		flex-basis: 300px;
+		min-width: 300px;
+		display: flex;
+		flex-direction: column;
+		
+	}
+	.project > .cta-button {
+	align-self: flex-end;
+}
+
+		.project > img {
+			height: 300px;
+			width: 300px;
+		}
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -277,7 +314,7 @@
 		<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1697223886065/jmT1tTaTt.png?w=1000&h=250&auto=compress,format&format=webp" width="256px"/>
 </div>
 		<div class="navbar-nav">
-		    <a href="#hero">Home</a>
+		    <a href="#hero">Start</a>
 		    <a href="#about">Über uns</a>
 		    <a href="#services">Leistungen</a>
 		    <a href="#testimonials">Kundenmeinungen</a>
@@ -303,19 +340,18 @@
         <!-- Über uns Section -->
         <section class="about" id="about">
             <h2>Über uns</h2>
-            <p>RoyalZSoftware UG ist ein innovatives Unternehmen mit Sitz in Weilheim in Oberbayern. Unsere Mission ist es, kleinen und mittelständischen Unternehmen durch digitale Lösungen zum Erfolg zu verhelfen.</p>
+            <p>RoyalZSoftware ist ein innovatives Unternehmen mit Sitz in Weilheim in Oberbayern. Unsere Mission ist es, kleinen und mittelständischen Unternehmen durch digitale Lösungen zum Erfolg zu verhelfen.</p>
         </section>
 
         <!-- Das machen wir Section -->
         <section class="services" id="services">
             <h2>Das machen wir</h2>
             <ul>
+                <li>Automatisierung - Effizienzsteigerung durch Prozessautomatisierung.</li>
                 <li>Individuelle Softwareentwicklung - maßgeschneiderte Lösungen für Ihre spezifischen Anforderungen.</li>
-                <li>Webdesign und -entwicklung - moderne und responsive Websites für Ihren Onlineauftritt.</li>
                 <li>Mobile App-Entwicklung - innovative Apps für Android und iOS.</li>
                 <li>IT-Beratung und Support - umfassende Beratung für Ihre IT-Projekte.</li>
                 <li>Cloud-Lösungen - Skalierbare und sichere Cloud-Services.</li>
-                <li>Automatisierung - Effizienzsteigerung durch Prozessautomatisierung.</li>
             </ul>
         </section>
 
@@ -323,15 +359,38 @@
         <section class="testimonials" id="testimonials">
             <h2>Das sagen unsere Kunden</h2>
             <blockquote>
-                <p>“Dank RoyalZSoftware konnten wir unsere Prozesse digitalisieren und Zeit sparen. Absolut empfehlenswert!”</p>
+                <p>"Die Zusammenarbeit mit RoyalZSoftware war für unser Unternehmen ein entscheidender Schritt. Ihr Fachwissen und ihre Effizienz bei der Erstellung unserer App haben unsere Erwartungen übertroffen."</p>
                 <div class="customer">
-                    <cite>Max Mustermann, Geschäftsführer von Musterfirma GmbH</cite>
+			<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1685743417864/jeYon5P-8.jpeg"/>
+                    <cite>Philip Mayer, Geschäftsführer von Ocean Package</cite>
+                </div>
+            </blockquote>
+            <blockquote>
+                <p>"Die Zusammenarbeit mit RoyalZSoftware war großartig. Die Lieferung war pünktlich und unglaublich schnell.
+Mein Kunde war sehr zufrieden mit der fertigen Smartphone-App!"</p>
+                <div class="customer">
+			<img src="https://cdn.prod.website-files.com/64f34f1941e5f1628a59e891/65177927eef2b2d74c843415_mg_portrait_neu.jpg"/>
+                    <cite>Martin Georg, selbstständiger Web Designer</cite>
                 </div>
             </blockquote>
         </section>
 
         <section class="portfolio" id="portfolio">
             <h2>Portfolio</h2>
+			<ul class="projects">
+				<div class="project">
+					<img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" alt="Preview"/>
+					<h3>
+						Isar Bericht App
+					</h3>
+					<p>
+					Eine mobile Anwendung, die dem Kunden das tägliche Geschäft vereinfacht hat. Es wurde eine Kundenverwaltung eingebaut.
+					</p>
+					<a href="#" class="cta-button">
+						Mehr erfahren
+					</a>
+				</div>
+			</ul>
         </section>
 
         <!-- Kontakt Section -->
@@ -339,8 +398,8 @@
             <h2>Kontakt</h2>
             <div class="split">
 	    <div>
-		<h3>Melde dich</h3>
-		<p>Wir freuen uns über deine Anfrage und werden uns baldmöglichst bei dir melden.</p>
+		<h3>Melden Sie sich</h3>
+		<p>Wir freuen uns über Ihre Anfrage und werden uns baldmöglichst bei Ihnen melden.</p>
 	    </div>
             <form>
                 <label for="name">Name</label>
