@@ -10,7 +10,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 </style>
     <style>
-
 	@font-face {
 	  font-family: 'Proxima Nova';
 	  src:  url('./regular.woff2') format('woff2');
@@ -38,7 +37,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            max-width: 1200px;
             width: 100%;
             margin: 0 auto;
 	    position: relative;
@@ -78,10 +76,18 @@
         section {
             padding: 50px 20px;
             width: 100%;
+		justify-content: center;
+		display: flex;
         }
+
+	.section-content {
+		max-width: 1000px;
+		width: 100%;
+	}
 
         /* Navbar */
         .navbar {
+		width: 100%;
             width: 100%;
             background-color: #1b232a;
 	    border-bottom: 1px solid #4e5f6e;
@@ -89,16 +95,17 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+		display: flex;
+	justify-content: center;
+        }
+	.navbar-content {
+            align-items: center;
+		width: 100%;
+		display: flex;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-        }
-
-        .navbar-logo {
-            margin-left: 20px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
+		max-width: 1000px;
+	}
 
         .navbar a {
             color: white;
@@ -137,6 +144,7 @@ content: '>';
         .hero {
             background-color: #1b232a;
             padding: 100px 20px;
+		height: 100vh;
         }
 
 	.hero > img {
@@ -159,9 +167,23 @@ content: '>';
 
         .about, .services, .testimonials, .contact, .portfolio, .why {
             background-color: #2a313b;
-            margin: 8px 0;
             // border-radius: 8px;
         }
+	.about {
+	color: white !important;
+	background-color: #d8b573;
+	}
+
+	.about h2 {
+		color: #202932 !important;
+		font-weight: bolder;
+	}
+
+	.about .section-content {
+		border: 2px solid black;
+		border-radius: 16px;
+		padding: 16px;
+	}
 
         .services li {
             margin: 10px 0;
@@ -301,7 +323,7 @@ content: '>';
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 900px) {
 		.navbar a {display: none}
             h1 {
                 font-size: 1.5rem;
@@ -324,6 +346,7 @@ content: '>';
     <main>
 	    <!-- Navbar -->
 	    <div class="navbar">
+		<div class="navbar-content">
 		<div class="navbar-logo">
 		<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1697223886065/jmT1tTaTt.png?w=1000&h=250&auto=compress,format&format=webp" width="256px"/>
 </div>
@@ -334,10 +357,12 @@ content: '>';
 		    <a href="#testimonials">Kundenmeinungen</a>
 		    <a href="#contact" class="kontakt">Kontakt</a>
 		</div>
+		</div>
 	    </div>
 
         <!-- Hero Section -->
         <section class="hero" id="hero">
+<div class="section-content">
 		<div class="split">
 <div>
             <h1>Softwarelösungen für kleine und mittelständische Unternehmen</h1>
@@ -348,16 +373,20 @@ content: '>';
 <img src="hero.png" width="100%"/>
 </div>
 </div>
+</div>
         </section>
 
         <!-- Über uns Section -->
         <section class="about" id="about">
+	<div class="section-content">
             <h2>Über uns</h2>
             <p>RoyalZSoftware ist ein innovatives Unternehmen mit Sitz in Weilheim in Oberbayern. Unsere Mission ist es, kleinen und mittelständischen Unternehmen durch digitale Lösungen zum Erfolg zu verhelfen.</p>
+</div>
         </section>
 
         <!-- Das machen wir Section -->
         <section class="services" id="services">
+	<div class="section-content">
             <h2>Das machen wir</h2>
             <ol>
                 <li>Automatisierung - Effizienzsteigerung durch Prozessautomatisierung.</li>
@@ -366,10 +395,12 @@ content: '>';
                 <li>IT-Beratung und Support - umfassende Beratung für Ihre IT-Projekte.</li>
                 <li>Cloud-Lösungen - Skalierbare und sichere Cloud-Services.</li>
             </ol>
+</div>
         </section>
 
         <!-- Das sagen unsere Kunden Section -->
         <section class="testimonials" id="testimonials">
+	<div class="section-content">
             <h2>Das sagen unsere Kunden</h2>
             <blockquote>
 		<span class="fa fa-star checked"></span>
@@ -396,9 +427,11 @@ Mein Kunde war sehr zufrieden mit der fertigen Smartphone-App!"</p>
                     <cite>Martin Georg, selbstständiger Web Designer</cite>
                 </div>
             </blockquote>
+</div>
         </section>
 
         <section class="portfolio" id="portfolio">
+	<div class="section-content">
             <h2>Portfolio</h2>
 			<ul class="projects">
 				<div class="project">
@@ -415,9 +448,11 @@ Mein Kunde war sehr zufrieden mit der fertigen Smartphone-App!"</p>
 					</a>
 				</div>
 			</ul>
+</div>
         </section>
 
         <section class="why" id="why">
+	<div class="section-content">
             <h2>Warum RoyalZSoftware?</h2>
 		<h3>Wir sind Experten</h3>
 		<p>Nach jahrelanger Erfahrung in der Software Entwicklung haben wir damit begonnen unser Wissen mit der ganzen Welt zu teilen. Regelmäßig teilen wir unser Expertenwissen auf <a href="https://royalzsoftware.de" target="_blank">unserem Blog</a> und auf <a target="_blank" href="https://instagram.com/royalzsoftware">Instagram</a>. Auch unsere ersten Videokurse durften zuletzt das Licht der Welt erblicken.</p>
@@ -427,11 +462,13 @@ Mein Kunde war sehr zufrieden mit der fertigen Smartphone-App!"</p>
 		<p>Sie haben mit Sicherheit schon überlegt eine Vollzeitkraft mit der Softwareentwicklung für Ihr Unternehmen zu beauftragen. Oft ist das aber sehr kostenintensiv und vor allem schwer zu koordieren, wenn man selber nicht vom Fach ist.</p>
 <p>Mit uns sparen Sie sich die Kopfschmerzen und überprüfen nur das endgültige Produkt.</p>
 	    </div>
+</div>
         </section>
 
 
         <!-- Kontakt Section -->
         <section class="contact" id="contact">
+	<div class="section-content">
             <h2>Kontakt</h2>
             <div class="split">
 	    <div>
@@ -451,16 +488,17 @@ Mein Kunde war sehr zufrieden mit der fertigen Smartphone-App!"</p>
                 <button type="submit">Senden</button>
             </form>
             </div>
+</div>
         </section>
     <!-- Social Media Section -->
     <footer>
         <div class="social-media">
             <a target="_blank" href="https://www.linkedin.com/company/royalzsoftware" class="linkedin">
-		<img src="./linkedin.svg" width="24px">
+		<img src="./linkedin.svg" width="32px" class="img-link">
 </a>
             <a target="_blank" href="https://www.instagram.com/royalzsoftware/" class="instagram">
 
-		<img src="./instagram.svg" width="24px">
+		<img src="./instagram.svg" width="32px" class="img-link">
 </a>
         </div>
         <p>Impressum: RoyalZSoftware UG (haftungsbeschränkt), Lärchenstraße 3, 82362 Weilheim in Oberbayern</p>
